@@ -5,6 +5,9 @@ const port = 3000
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+app.get('/shot', (req, res) => {
+  res.sendFile(__dirname + '/public/shot.html')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
